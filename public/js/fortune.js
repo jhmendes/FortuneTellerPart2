@@ -1,8 +1,11 @@
+// add some Javascript Life to the page:
+
 
 $('form').on('submit', (event) => {
   event.preventDefault();
 
   let newFortuneContent = $('#fortune-content').val();
+
 
   let request = $.ajax ({
     method: 'POST',
@@ -13,9 +16,13 @@ $('form').on('submit', (event) => {
 
 // call back function
   request.done(() => {
-    $('ul.fortunes').append('<li>' + newFortuneContent + '</li>');
+    $('ul.fortunes').prepend('<li>' + newFortuneContent + '</li>');
     $('#fortune-content').val('');
 
   });
 
 });
+//
+$('h1').hide().slideDown(2000);
+$('ul').hide().slideDown(2000);
+$('#fortune-form').hide().fadeIn(4000);
