@@ -23,6 +23,6 @@ $('form').on('submit', (event) => {
 
 });
 //
-$('h1').hide().slideDown(2000);
-$('ul').hide().slideDown(2000);
-$('#fortune-form').hide().fadeIn(4000);
+$('h1').hide().slideDown(500);
+$('ul').hide().slideDown(500);
+$('#fortune-form').hide().fadeIn(500);
